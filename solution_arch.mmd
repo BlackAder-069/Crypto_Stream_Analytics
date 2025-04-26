@@ -1,0 +1,14 @@
+flowchart TD
+    A["CoinAPI Producer\n(coinapi_producer.py)"] -- Publishes BTC/USD rates --> B["Kafka Topic\nraw_coin_data"]
+    B -- Consumes raw data --> C["Raw Data Consumer\n(consumer_raw_coin_data.py)"]
+    C -- Inserts raw data --> D["MySQL\nraw_coin_data table"]
+    B -- Streaming read --> E["Spark Structured Streaming\n(spark_stream_processor.py)"]
+    E -- Windowed Aggregation --> F["Kafka Topic\naggregated_data"]
+    E -- Writes Aggregates --> G["MySQL\nstream_agg table"]
+    G -- Used for comparison --> H["Compare Stream vs Batch\n(compare_stream_vs_batch.py)"]
+    D -- Used for comparison --> H
+
+    subgraph "MySQL Database"
+        D
+        G
+    end

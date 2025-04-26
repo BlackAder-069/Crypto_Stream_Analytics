@@ -1,0 +1,70 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+
+# Environment variables and config files that might contain API keys
+.env
+*.env
+config.ini
+*.ini
+*.cfg
+
+# Log files
+*.log
+logs/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# MySQL connector and other large JAR files (optional, include if needed)
+# *.jar
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Spark files
+spark-warehouse/
+metastore_db/
+derby.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Personal files that might contain credentials or API keys
+credentials.json
+api_keys.txt
+secret_key.txt
+
+# Ignore any file with "api_key" or "secret" in the name
+*api_key*
+*secret*
+*password*
+*credential*
+
+# Kafka data directories
+kafka-logs/
+zookeeper-data/
