@@ -97,7 +97,7 @@ def write_to_mysql(df, epoch_id):
             .option("driver", "com.mysql.cj.jdbc.Driver") \
             .option("dbtable", "stream_agg") \
             .option("user", "coinuser") \
-            .option("password", "Coinpass@123") \
+            .option("password", "<PASS>") \
             .mode("append") \
             .save()
             print(f"Successfully wrote batch {epoch_id} to MySQL")
