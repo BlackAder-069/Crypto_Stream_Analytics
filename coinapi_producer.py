@@ -3,7 +3,7 @@ import time
 import json
 from kafka import KafkaProducer
 
-API_KEY = 'abb93252-dc7c-49cf-b685-6a6ae2782c9e'
+API_KEY = '<API_KEY>'
 URL = 'https://rest.coinapi.io/v1/exchangerate/BTC/USD'
 
 producer = KafkaProducer(
