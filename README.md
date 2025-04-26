@@ -94,7 +94,7 @@ python consumer_raw_coin_data.py
 
 4. Run the Spark streaming processor:
 ```
-python spark_stream_processor.py
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.3 --jars mysql-connector-java-8.3.0.jar spark_stream_processor.py
 ```
 
 5. Run the performance comparison:
