@@ -15,8 +15,8 @@ consumer = KafkaConsumer(
 conn = pymysql.connect(
     host='localhost',
     user='coinuser',
-    password='Coinpass@123',
-    database='cryptodb'
+    password='<PASS>',
+    database='<LOCAL_DB>'
 )
 cursor = conn.cursor()
 
